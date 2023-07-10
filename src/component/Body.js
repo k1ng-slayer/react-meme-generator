@@ -1,21 +1,8 @@
 import React, { useState } from "react";
-import axios from "axios";
+import memesData from "../memesData";
 
 function Body() {
-    const [image, setImage] = useState();
-
-    const handleClick = () => {
-        axios
-            .get("https://picsum.photos/640/360")
-            .then((response) => {
-                console.log(".then() executed", response);
-                setImage(response);
-            })
-            .catch((error) => {
-                console.log(error);
-                console.log(".catch() executed", error);
-            });
-    };
+    const [memes, setMemes] = useState("");
 
     return (
         <main>
@@ -30,11 +17,9 @@ function Body() {
                     placeholder="Bottom text"
                     className="form-input"
                 />
-                <button className="form-button" onClick={handleClick}>
-                    Get a new meme image 🖼
-                </button>
+                <button className="form-button">Get a new meme image 🖼</button>
             </form>
-            <img src={image} alt="random-pic" />
+            {/* <img src={image} alt="random-pic" /> */}
         </main>
     );
 }
