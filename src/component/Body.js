@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import memesData from "../memesData";
 
 function Body() {
-    const [memes, setMemes] = useState("");
+    const [meme, setMeme] = useState("");
 
     return (
         <main>
@@ -19,7 +19,7 @@ function Body() {
                 />
                 <button className="form-button">Get a new meme image 🖼</button>
             </form>
-            {/* <img src={image} alt="random-pic" /> */}
+            <img src={meme} alt="random-pic" />
         </main>
     );
 }
