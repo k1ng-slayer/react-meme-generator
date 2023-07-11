@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Detour.css";
 
 function Detour() {
-    const [isGoingOut, setIsGoingOut] = React.useState(true);
+    const [isGoingOut, setIsGoingOut] = useState(true);
 
     function changeMind() {
         setIsGoingOut((prevState) => !prevState);
