@@ -51,3 +51,37 @@ form button {
     border: none;
     cursor: pointer;
 }
+
+main div {
+    position: relative;
+    text-align: center;
+}
+
+main img {
+    height: 268px;
+    width: 477px;
+    border-radius: 5px;
+    margin: 36px;
+}
+
+.text-top {
+    position: absolute;
+    top: 45px;
+    left: 48%;
+}
+.text-bottom {
+    position: absolute;
+    bottom: 45px;
+    left: 48%;
+}
+
+/* main div {
+    position: relative;
+    text-align: center;
+}
+
+.text-top {
+    position: absolute;
+    top: 45px;
+    left: 50%;
+}*/
