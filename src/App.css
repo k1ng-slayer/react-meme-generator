@@ -68,20 +68,13 @@ main img {
     position: absolute;
     top: 45px;
     left: 48%;
+    background-color: #672280;
+    color: white;
 }
 .text-bottom {
     position: absolute;
     bottom: 45px;
     left: 48%;
+    background-color: #672280;
+    color: white;
 }
-
-/* main div {
-    position: relative;
-    text-align: center;
-}
-
-.text-top {
-    position: absolute;
-    top: 45px;
-    left: 50%;
-}*/
