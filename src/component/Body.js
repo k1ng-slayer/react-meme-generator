@@ -1,21 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import memesData from "../memesData";
 
 function Body() {
-    const [num, setNum] = useState(49);
+    const [img, setImg] = useState([]);
     const [text, setText] = useState({
         top: "",
         bottom: "",
     });
 
-    const img = memesData.data.memes[num].url;
-    const len = memesData.data.memes.length;
+    const changeImage = () => {
+        axios
+            .get("https://api.imgflip.com/get_memes")
+            .then((response) => {
+                const len = response.data.data.memes.length;
+                const num = Math.floor(Math.random() * len);
+                // console.log(response.data.data.memes[num]);
+                setImg(response.data.data.memes[num].url);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    };
 
     const handleClick = (event) => {
         event.preventDefault();
-        setNum(Math.floor(Math.random() * len));
-        console.log(num);
-        console.log(text);
+        changeImage();
     };
 
     const handleChange = (event) => {
@@ -24,6 +34,10 @@ function Body() {
             [event.target.name]: event.target.value,
         }));
     };
+
+    useEffect(() => {
+        changeImage();
+    }, [setImg]);
 
     return (
         <main>
