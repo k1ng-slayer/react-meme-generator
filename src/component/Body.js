@@ -35,7 +35,7 @@ function Body() {
 
     useEffect(() => {
         changeImage();
-    }, [setImg]);
+    }, []);
 
     return (
         <main>
