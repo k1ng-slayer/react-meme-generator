@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import memesData from "../memesData";
 
 function Body() {
     const [img, setImg] = useState([]);
@@ -15,7 +14,6 @@ function Body() {
             .then((response) => {
                 const len = response.data.data.memes.length;
                 const num = Math.floor(Math.random() * len);
-                // console.log(response.data.data.memes[num]);
                 setImg(response.data.data.memes[num].url);
             })
             .catch((error) => {
