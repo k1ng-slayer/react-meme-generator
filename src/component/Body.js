@@ -44,7 +44,7 @@ function Body() {
                     Get a new meme image
                 </button>
             </form>
-            <div>
+            <div className="meme">
                 <img src={img} alt="random-pic" />
                 <div className="text-top">{text.top}</div>
                 <div className="text-bottom">{text.bottom}</div>
